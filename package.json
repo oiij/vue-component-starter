@@ -1,24 +1,28 @@
 {
-  "name": "vite-project",
+  "name": "vite-lib-starter",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "files": [
-    "dist",
+    "lib",
     "index.d.ts"
   ],
-  "main": "./dist/counter.umd.cjs",
-  "module": "./dist/counter.js",
+  "main": "./lib/index.umd.cjs",
+  "module": "./lib/index.js",
   "types": "./index.d.ts",
   "exports": {
     "types": "./index.d.ts",
-    "import": "./dist/counter.js",
-    "require": "./dist/counter.umd.cjs"
+    "import": "./lib/index.js",
+    "require": "./lib/index.umd.cjs"
   },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build:lib": "tsc && vite build --mode lib"
+    "build:lib": "tsc && vite build --mode lib",
+    "lint": "eslint",
+    "test": "vitest",
+    "type": "vue-tsc --noEmit",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^0.8.1",

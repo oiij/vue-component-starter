@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "",
     "target": "ESNext",
     "module": "ESNext",
     "lib": [
@@ -22,7 +22,7 @@
         "./src/*"
       ],
       "~~/*": [
-        "./package/*"
+        "./packages/*"
       ],
     },
     "types": [
@@ -33,11 +33,16 @@
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "packages/**/*.ts",
+    "packages/**/*.d.ts",
+    "packages/**/*.tsx",
+    "packages/**/*.vue",
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "lib"
   ],
   "references": [
     {
