@@ -1,0 +1,55 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "main": "./dist/counter.umd.cjs",
+  "module": "./dist/counter.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/counter.js",
+    "require": "./dist/counter.umd.cjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:lib": "tsc && vite build --mode lib"
+  },
+  "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.8.1",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "@unocss/reset": "^0.48.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitest/ui": "^0.26.3",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "@vue/test-utils": "^2.2.7",
+    "@vueuse/core": "^9.10.0",
+    "colord": "^2.9.3",
+    "eslint": "^8.31.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.8.0",
+    "jsdom": "^20.0.3",
+    "less": "^4.1.3",
+    "pinia": "^2.0.28",
+    "pinia-plugin-persistedstate": "^3.0.2",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4",
+    "unocss": "^0.48.0",
+    "unocss-preset-extra": "^0.4.3",
+    "unocss-preset-scrollbar": "^0.2.1",
+    "vite": "^4.0.0",
+    "vite-plugin-dts": "^1.7.1",
+    "vitest": "^0.26.3",
+    "vue": "^3.2.45",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.6",
+    "vue-tsc": "^1.0.22"
+  }
+}
