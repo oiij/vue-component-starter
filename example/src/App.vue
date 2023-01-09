@@ -1,10 +1,10 @@
 <script setup lang='ts'>
-import {Button} from '~~/index'
-
+import {UButton} from 'ui-starter'
 </script>
 <template>
-<div wfull h-100vh bg-gray2>
-<Button></Button>
+<div>
+
+  <UButton>button</UButton>
 </div>
 </template>
 <style scoped lang='less'>

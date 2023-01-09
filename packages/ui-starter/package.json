@@ -1,0 +1,34 @@
+{
+  "name": "ui-starter",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build",
+    "stub": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "main": "./dist/ui-starter.umd.cjs",
+  "module": "./dist/ui-starter.js",
+  "exports": {
+    ".": {
+      "types": "./dist/types/ui-starter/src/index.d.ts",
+      "import": "./dist/ui-starter.js",
+      "require": "./dist/ui-starter.umd.cjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "volar.d.ts"
+  ],
+  "types": "./dist/types/ui-starter/src/index.d.ts",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}
