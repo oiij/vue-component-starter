@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "build:lib": "tsc && vite build --mode lib",
+    "dev": "rimraf packages/*/{dist,es,lib} && pnpm -r -F \"./packages/{ui-starter,utils}\" dev",
+    "build": "rimraf packages/*/{dist,es,lib} && pnpm -r -F \"./packages/{ui-starter,utils}\" build",
+    "example":"pnpm -C example dev",
     "lint": "eslint",
     "test": "vitest",
     "type": "vue-tsc --noEmit",
