@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "rimraf packages/*/{dist,es,lib} && pnpm -r -F \"./packages/{ui-starter,utils}\" dev",
     "build": "rimraf packages/*/{dist,es,lib} && pnpm -r -F \"./packages/{ui-starter,utils}\" build",
-    "example":"pnpm -C example dev",
+    "example": "pnpm -C example dev",
     "lint": "eslint",
     "test": "vitest",
     "type": "vue-tsc --noEmit",
@@ -42,6 +42,7 @@
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.0",
     "vite-plugin-dts": "^1.7.1",
+    "vitepress": "1.0.0-alpha.35",
     "vitest": "^0.26.3",
     "vue": "^3.2.45",
     "vue-i18n": "^9.2.2",
