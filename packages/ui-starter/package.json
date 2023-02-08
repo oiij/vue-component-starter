@@ -1,30 +1,33 @@
 {
   "name": "ui-starter",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
-  "scripts": {
-    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build",
-    "dev": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
-  },
-  "type": "module",
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "main": "./dist/ui-starter.umd.cjs",
-  "module": "./dist/ui-starter.js",
+  "keywords": [],
   "exports": {
     ".": {
       "types": "./dist/types/ui-starter/src/index.d.ts",
-      "import": "./dist/ui-starter.js",
-      "require": "./dist/ui-starter.umd.cjs"
+      "require": "./dist/ui-starter.umd.cjs",
+      "import": "./dist/ui-starter.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "main": "./dist/ui-starter.umd.cjs",
+  "module": "./dist/ui-starter.js",
+  "types": "./dist/types/ui-starter/src/index.d.ts",
   "files": [
     "dist",
     "volar.d.ts"
   ],
-  "types": "./dist/types/ui-starter/src/index.d.ts",
+  "scripts": {
+    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build",
+    "dev": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "update-deps": "taze -w && pnpm i"
+  },
   "dependencies": {
 
   },

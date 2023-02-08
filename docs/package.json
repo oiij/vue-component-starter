@@ -2,15 +2,15 @@
   "name": "ui-starter/docs",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev ",
     "build": "vitepress build",
     "serve": "vitepress serve"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "markdown-it": "^13.0.1"
   },

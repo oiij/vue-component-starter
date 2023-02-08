@@ -19,7 +19,7 @@
     "paths": {
       "ui-starter": [
         "./packages/ui-starter/src/index.ts"
-      ],
+      ]
     },
     "types": [
       "node",

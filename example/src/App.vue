@@ -1,12 +1,13 @@
 <script setup lang='ts'>
-import {UButton} from 'ui-starter'
+import { UButton } from 'ui-starter'
 </script>
-<template>
-<div>
 
-  <UButton>button</UButton>
-</div>
+<template>
+  <div>
+    <UButton>button</UButton>
+  </div>
 </template>
+
 <style scoped lang='less'>
 
 </style>

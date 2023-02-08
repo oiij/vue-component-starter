@@ -1,5 +1,5 @@
 export const demo = '1'
-export type Demo = {
-  d:string
+export interface Demo {
+  d: string
 }
 export {}

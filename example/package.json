@@ -2,13 +2,16 @@
   "name": "example",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "update-deps": "taze -w && pnpm i",
     "preview": "vite preview"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
