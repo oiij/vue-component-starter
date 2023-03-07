@@ -32,10 +32,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "dev": "tsup --watch",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "update-deps": "taze -w && pnpm i"
+    "dev": "tsup --watch"
   },
   "peerDependencies": {
     "vue": "^3.2.0"

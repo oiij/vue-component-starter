@@ -19,9 +19,18 @@
     "forceConsistentCasingInFileNames": true, //禁止对同一个文件的不一致的引用
 
     "paths": {
-      "ui-starter": [
-        "./packages/ui-starter/src/index.ts"
-      ]
+      "lib-name": [
+        "./packages/lib-name/src/index.ts"
+      ],
+      "@lib-name/components": [
+        "./packages/components/src/index.ts"
+      ],
+      "@lib-name/utils": [
+        "./packages/utils/src/index.ts"
+      ],
+      "@lib-name/preset": [
+        "./packages/preset/src/index.ts"
+      ],
     },
     "types": [
       "node",

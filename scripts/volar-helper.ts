@@ -1,19 +1,15 @@
-// The file is not designed to run directly. `cwd` should be project root.
-import path from 'path'
-import process from 'process'
+import path from 'node:path'
+import process from 'node:process'
 import fs from 'fs-extra'
 import * as globalComponents from '../packages/components'
 
 const TYPE_ROOT = process.cwd()
 
-// XButton is for tsx type checking, shouldn't be exported
-const excludeComponents = ['NxButton']
-
-function exist(path) {
+function exist(path: string) {
   return fs.existsSync(path)
 }
 
-function parseComponentsDeclaration(code) {
+function parseComponentsDeclaration(code: string) {
   if (!code)
     return {}
 
@@ -27,8 +23,9 @@ function parseComponentsDeclaration(code) {
 async function generateComponentsType() {
   const components = {}
   Object.keys(globalComponents).forEach((key) => {
-    const entry = `typeof import('naive-ui')['${key}']`
-    if (key.startsWith('N') && !excludeComponents.includes(key))
+    // Replace after packaging
+    const entry = `typeof import('onu-ui')['${key}']`
+    if (key.startsWith('O'))
       components[key] = entry
   })
   const originalContent = exist(path.resolve(TYPE_ROOT, 'volar.d.ts'))
