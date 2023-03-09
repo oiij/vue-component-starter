@@ -1,1 +1,1 @@
-# UI-Starter
+# eiog-ui

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { OTag } from '@onu-ui/components'
+import { OTag } from '@eiog-ui/components'
 
 const Tag_Content = 'Test content'
 describe('o-alert', () => {

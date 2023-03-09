@@ -24,8 +24,8 @@ async function generateComponentsType() {
   const components = {}
   Object.keys(globalComponents).forEach((key) => {
     // Replace after packaging
-    const entry = `typeof import('onu-ui')['${key}']`
-    if (key.startsWith('O'))
+    const entry = `typeof import('eiog-ui')['${key}']`
+    if (key.startsWith('E'))
       components[key] = entry
   })
   const originalContent = exist(path.resolve(TYPE_ROOT, 'volar.d.ts'))

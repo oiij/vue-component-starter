@@ -14,7 +14,7 @@ export default defineConfig({
     emptyOutDir: false,
     lib: {
       entry: resolve(__dirname, 'index.ts'),
-      name: '@onu-ui/components',
+      name: '@eiog-ui/components',
     },
     rollupOptions: {
       external: ['vue'],
@@ -45,7 +45,7 @@ export default defineConfig({
         const styleFile = resolve(root, outDir, 'style.css')
         await fs.copyFile(
           styleFile,
-          resolve(__dirname, '../onu-ui/src/style.css'),
+          resolve(__dirname, '../eiog-ui/src/style.css'),
         )
       },
     },

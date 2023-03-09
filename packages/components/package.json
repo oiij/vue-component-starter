@@ -1,22 +1,22 @@
 {
-  "name": "@onu-ui/components",
+  "name": "@eiog-ui/components",
   "type": "module",
-  "version": "1.0.13-beta.8",
-  "description": "Onu-UI components for use on demand",
-  "author": "chris-zhu <https://github.com/chris-zhu>",
+  "version": "0.0.1-beta.1",
+  "description": "",
+  "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/onu-ui/onu-ui/blob/main/packages/components/README.md",
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onu-ui/onu-ui.git",
+    "url": "",
     "directory": "packages/components"
   },
   "bugs": {
-    "url": "https://github.com/onu-ui/onu-ui/issues"
+    "url": ""
   },
   "keywords": [
-    "onu-ui",
-    "@onu-ui/components"
+    "eiog-ui",
+    "@eiog-ui/components"
   ],
   "sideEffects": false,
   "exports": {
@@ -34,12 +34,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build && pnpm run --filter \"../lib-name\" build",
+    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build && pnpm run --filter \"../eiog-ui\" build",
     "dev": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
   },
   "dependencies": {
-    "@onu-ui/preset": "workspace:*",
-    "@onu-ui/utils": "workspace:*",
+    "@eiog-ui/preset": "workspace:*",
+    "@eiog-ui/utils": "workspace:*",
     "@vueuse/core": "^9.1.0"
   },
   "devDependencies": {

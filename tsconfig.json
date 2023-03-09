@@ -17,18 +17,17 @@
     "strictNullChecks": true, // 不允许把null、undefined赋值给其他类型的变量
     "allowJs": true, //允许编译 JavaScript 文件
     "forceConsistentCasingInFileNames": true, //禁止对同一个文件的不一致的引用
-
     "paths": {
-      "lib-name": [
-        "./packages/lib-name/src/index.ts"
+      "eiog-ui": [
+        "./packages/eiog-ui/src/index.ts"
       ],
-      "@lib-name/components": [
-        "./packages/components/src/index.ts"
+      "@eiog-ui/components": [
+        "./packages/components/index.ts"
       ],
-      "@lib-name/utils": [
+      "@eiog-ui/utils": [
         "./packages/utils/src/index.ts"
       ],
-      "@lib-name/preset": [
+      "@eiog-ui/preset": [
         "./packages/preset/src/index.ts"
       ],
     },

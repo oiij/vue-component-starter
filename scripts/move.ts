@@ -3,8 +3,8 @@ import fse from 'fs-extra'
 
 const componentsDir = resolve(__dirname, '../packages/components', 'dist')
 const volarPath = resolve(process.cwd(), 'volar.d.ts')
-const targetDir = resolve(__dirname, '../packages/onu-ui', 'es/components')
-const volarTargetPath = resolve(__dirname, '../packages/onu-ui', 'volar.d.ts')
+const targetDir = resolve(__dirname, '../packages/eiog-ui', 'es/components')
+const volarTargetPath = resolve(__dirname, '../packages/eiog-ui', 'volar.d.ts')
 
 const main = async () => {
   try {

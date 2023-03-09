@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
-import { OSwitch } from '@onu-ui/components'
+import { OSwitch } from '@eiog-ui/components'
 
 const _mount = (options: any) => {
   return mount({

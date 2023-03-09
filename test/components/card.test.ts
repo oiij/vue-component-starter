@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { OCard } from '@onu-ui/components'
+import { OCard } from '@eiog-ui/components'
 
 const CARD_TEXT_CONTENT = 'Test Content'
 describe('o-card', () => {

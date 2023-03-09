@@ -6,6 +6,9 @@ importers:
     specifiers:
       '@antfu/eslint-config': ^0.35.2
       '@antfu/ni': ^0.20.0
+      '@eiog-ui/components': workspace:*
+      '@eiog-ui/preset': workspace:*
+      '@eiog-ui/utils': workspace:*
       '@types/fs-extra': ^11.0.0
       '@types/node': ^18.11.9
       '@unocss/reset': ^0.48.0
@@ -13,6 +16,7 @@ importers:
       '@vitest/ui': ^0.26.3
       '@vue/test-utils': ^2.2.7
       '@vueuse/core': ^9.10.0
+      eiog-ui: workspace:*
       eslint: ^8.31.0
       esno: ^0.16.3
       fs-extra: ^11.1.0
@@ -24,7 +28,6 @@ importers:
       taze: ^0.8.5
       tsup: ^6.5.0
       typescript: ^4.9.4
-      ui-starter: workspace:^1.0.0
       unocss: ^0.48.0
       unplugin-auto-import: ^0.11.4
       unplugin-vue-components: ^0.22.9
@@ -35,10 +38,13 @@ importers:
       vue: ^3.2.45
       vue-tsc: ^1.0.22
     dependencies:
-      ui-starter: link:packages/ui-starter
+      eiog-ui: link:packages/eiog-ui
     devDependencies:
       '@antfu/eslint-config': registry.npmmirror.com/@antfu/eslint-config/0.35.2_iukboom6ndih5an6iafl45j2fe
       '@antfu/ni': 0.20.0
+      '@eiog-ui/components': link:packages/components
+      '@eiog-ui/preset': link:packages/preset
+      '@eiog-ui/utils': link:packages/utils
       '@types/fs-extra': registry.npmmirror.com/@types/fs-extra/11.0.0
       '@types/node': 18.11.18
       '@unocss/reset': registry.npmmirror.com/@unocss/reset/0.48.2
@@ -67,7 +73,26 @@ importers:
       vue: registry.npmmirror.com/vue/3.2.45
       vue-tsc: registry.npmmirror.com/vue-tsc/1.0.22_typescript@4.9.4
 
-  packages/ui-starter:
+  packages/components:
+    specifiers:
+      '@eiog-ui/preset': workspace:*
+      '@eiog-ui/utils': workspace:*
+      '@vueuse/core': ^9.1.0
+      resize-observer-polyfill: ^1.5.1
+    dependencies:
+      '@eiog-ui/preset': link:../preset
+      '@eiog-ui/utils': link:../utils
+      '@vueuse/core': 9.10.0
+    devDependencies:
+      resize-observer-polyfill: 1.5.1
+
+  packages/eiog-ui:
+    specifiers:
+      '@eiog-ui/components': workspace:*
+    dependencies:
+      '@eiog-ui/components': link:../components
+
+  packages/preset:
     specifiers: {}
 
   packages/utils:
@@ -573,6 +598,54 @@ packages:
 
   /@types/node/18.11.18:
     resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+    dev: true
+
+  /@types/web-bluetooth/0.0.16:
+    resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
+
+  /@vueuse/core/9.10.0:
+    resolution: {integrity: sha512-CxMewME07qeuzuT/AOIQGv0EhhDoojniqU6pC3F8m5VC76L47UT18DcX88kWlP3I7d3qMJ4u/PD8iSRsy3bmNA==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.16
+      '@vueuse/metadata': 9.10.0
+      '@vueuse/shared': 9.10.0
+      vue-demi: 0.13.11
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  /@vueuse/core/9.10.0_vue@3.2.45:
+    resolution: {integrity: sha512-CxMewME07qeuzuT/AOIQGv0EhhDoojniqU6pC3F8m5VC76L47UT18DcX88kWlP3I7d3qMJ4u/PD8iSRsy3bmNA==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.16
+      '@vueuse/metadata': 9.10.0
+      '@vueuse/shared': 9.10.0_vue@3.2.45
+      vue-demi: 0.13.11_vue@3.2.45
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
+  /@vueuse/metadata/9.10.0:
+    resolution: {integrity: sha512-G5VZhgTCapzU9rv0Iq2HBrVOSGzOKb+OE668NxhXNcTjUjwYxULkEhAw70FtRLMZc+hxcFAzDZlKYA0xcwNMuw==}
+
+  /@vueuse/shared/9.10.0:
+    resolution: {integrity: sha512-vakHJ2ZRklAzqmcVBL38RS7BxdBA4+5poG9NsSyqJxrt9kz0zX3P5CXMy0Hm6LFbZXUgvKdqAS3pUH1zX/5qTQ==}
+    dependencies:
+      vue-demi: 0.13.11
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  /@vueuse/shared/9.10.0_vue@3.2.45:
+    resolution: {integrity: sha512-vakHJ2ZRklAzqmcVBL38RS7BxdBA4+5poG9NsSyqJxrt9kz0zX3P5CXMy0Hm6LFbZXUgvKdqAS3pUH1zX/5qTQ==}
+    dependencies:
+      vue-demi: 0.13.11_vue@3.2.45
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: true
 
   /acorn/8.8.1:
@@ -1503,6 +1576,10 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /resize-observer-polyfill/1.5.1:
+    resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==}
+    dev: true
+
   /resolve/1.17.0:
     resolution: {integrity: sha512-ic+7JYiV8Vi2yzQGFWOkiZD5Z9z7O2Zhm9XMaTxdJExKasieFCr+yXZ/WmXsckHiKl12ar0y6XiXDx3m4RHn1w==}
     dependencies:
@@ -1794,6 +1871,34 @@ packages:
       chokidar: 3.5.3
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.5.0
+    dev: true
+
+  /vue-demi/0.13.11:
+    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dev: false
+
+  /vue-demi/0.13.11_vue@3.2.45:
+    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: registry.npmmirror.com/vue/3.2.45
     dev: true
 
   /webpack-sources/3.2.3:
@@ -8161,7 +8266,7 @@ packages:
       '@docsearch/js': registry.npmmirror.com/@docsearch/js/3.3.1
       '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/4.0.0_vite@4.0.4+vue@3.2.45
       '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.4.5
-      '@vueuse/core': registry.npmmirror.com/@vueuse/core/9.10.0_vue@3.2.45
+      '@vueuse/core': 9.10.0_vue@3.2.45
       body-scroll-lock: registry.npmmirror.com/body-scroll-lock/4.0.0-beta.0
       shiki: registry.npmmirror.com/shiki/0.12.1
       vite: registry.npmmirror.com/vite/4.0.4_dprl76twtlijnqpm3fdjsbkzqm

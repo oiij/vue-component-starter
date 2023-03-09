@@ -1,5 +1,5 @@
 {
-  "name": "@lib-name/monorepo",
+  "name": "@eiog-ui/monorepo",
   "version": "0.0.1-beta.1",
   "private": true,
   "packageManager": "pnpm@7.28.0",
@@ -24,15 +24,14 @@
     "volar:helper": "esno scripts/volar-helper"
   },
   "dependencies": {
-    "ui-starter": "workspace:^1.0.0"
+    "eiog-ui": "workspace:*"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.2",
     "@antfu/ni": "^0.20.0",
-    "@lib-name/components": "workspace:*",
-    "@lib-name/docs": "workspace:*",
-    "@lib-name/preset": "workspace:*",
-    "@lib-name/utils": "workspace:*",
+    "@eiog-ui/components": "workspace:*",
+    "@eiog-ui/preset": "workspace:*",
+    "@eiog-ui/utils": "workspace:*",
     "@types/fs-extra": "^11.0.0",
     "@types/node": "^18.11.9",
     "@unocss/reset": "^0.48.0",

@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { nextTick } from 'vue'
-import message from '@onu-ui/components/message/src/index.vue'
+import message from '@eiog-ui/components/message/src/index.vue'
 
 const MESSAGE_CONTENT = 'test message'
 

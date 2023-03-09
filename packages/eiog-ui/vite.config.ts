@@ -11,8 +11,8 @@ export default defineConfig({
     emptyOutDir: false,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'onu-ui',
-      fileName: 'onu-ui',
+      name: 'eiog-ui',
+      fileName: 'eiog-ui',
     },
     rollupOptions: {
       external: [
