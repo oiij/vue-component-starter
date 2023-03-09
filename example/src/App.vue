@@ -1,10 +1,10 @@
 <script setup lang='ts'>
-import { UButton } from 'eiog-ui'
+import { EButton } from '@eiog-ui/components'
 </script>
 
 <template>
-  <div>
-    <UButton>button</UButton>
+  <div class="w-200 h-200 flex items-center justify-center bg-gray1">
+    <EButton>button</EButton>
   </div>
 </template>
 

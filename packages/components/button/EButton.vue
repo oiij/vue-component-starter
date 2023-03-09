@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <button class="bg-rose5 e-button">
+    <button class="p3 bg-rose5 text-dark text-xl">
       <slot />
     </button>
   </div>
@@ -12,6 +12,7 @@
 
 <style scoped lang='less'>
 .e-button{
-  background: #000;
+  color: antiquewhite;
+  background-color: aqua;
 }
 </style>
