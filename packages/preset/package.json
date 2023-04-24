@@ -1,5 +1,6 @@
 {
   "name": "@pkg-name/preset",
+  "type": "module",
   "version": "0.0.1-beta.1",
   "description": "",
   "author": "",
@@ -22,12 +23,12 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
     }
   },
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
