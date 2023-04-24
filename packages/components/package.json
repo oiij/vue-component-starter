@@ -1,5 +1,5 @@
 {
-  "name": "@eiog-ui/components",
+  "name": "@pkg-name/components",
   "type": "module",
   "version": "0.0.1-beta.1",
   "description": "",
@@ -15,8 +15,8 @@
     "url": ""
   },
   "keywords": [
-    "eiog-ui",
-    "@eiog-ui/components"
+    "pkg-name",
+    "@pkg-name/components"
   ],
   "sideEffects": false,
   "exports": {
@@ -34,12 +34,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build && pnpm run --filter \"../eiog-ui\" build",
+    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build && pnpm run --filter \"../pkg-name\" build",
     "dev": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
   },
   "dependencies": {
-    "@eiog-ui/preset": "workspace:*",
-    "@eiog-ui/utils": "workspace:*",
+    "@pkg-name/preset": "workspace:*",
+    "@pkg-name/utils": "workspace:*",
     "@vueuse/core": "^9.1.0"
   },
   "devDependencies": {

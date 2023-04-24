@@ -1,9 +1,9 @@
 import { nextTick } from 'vue'
 import { describe, expect, test, vi } from 'vitest'
-import OCollapse from '@eiog-ui/components/collapse/src/collapse.vue'
-import OCollapseItem from '@eiog-ui/components/collapse/src/collapseItem.vue'
+import OCollapse from '@pkg-name/components/collapse/src/collapse.vue'
+import OCollapseItem from '@pkg-name/components/collapse/src/collapseItem.vue'
 import { config, mount } from '@vue/test-utils'
-import type { OCollapseItemInstance } from '@eiog-ui/components/collapse/src/props'
+import type { OCollapseItemInstance } from '@pkg-name/components/collapse/src/props'
 import type { VueWrapper } from '@vue/test-utils'
 
 config.global.stubs = {

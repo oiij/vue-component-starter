@@ -1,1 +1,1 @@
-# eiog-ui
+# pkg-name

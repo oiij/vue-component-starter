@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { EButton } from '@eiog-ui/components'
+import { EButton } from '@pkg-name/components'
 </script>
 
 <template>

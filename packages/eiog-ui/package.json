@@ -1,5 +1,5 @@
 {
-  "name": "eiog-ui",
+  "name": "pkg-name",
   "type": "module",
   "version": "0.0.1-beta.1",
   "description": "",
@@ -9,28 +9,28 @@
   "repository": {
     "type": "git",
     "url": "",
-    "directory": "packages/eiog-ui"
+    "directory": "packages/pkg-name"
   },
   "bugs": {
     "url": ""
   },
   "keywords": [
-    "eiog-ui",
+    "pkg-name",
     "unocss",
     "vueuse"
   ],
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/types/eiog-ui/src/index.d.ts",
-      "require": "./dist/eiog-ui.umd.cjs",
-      "import": "./dist/eiog-ui.js"
+      "types": "./dist/types/pkg-name/src/index.d.ts",
+      "require": "./dist/pkg-name.umd.cjs",
+      "import": "./dist/pkg-name.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
-  "main": "./dist/eiog-ui.umd.cjs",
-  "module": "./dist/eiog-ui.js",
-  "types": "./dist/types/eiog-ui/src/index.d.ts",
+  "main": "./dist/pkg-name.umd.cjs",
+  "module": "./dist/pkg-name.js",
+  "types": "./dist/types/pkg-name/src/index.d.ts",
   "files": [
     "dist",
     "volar.d.ts"
@@ -40,7 +40,7 @@
     "dev": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
   },
   "dependencies": {
-    "@eiog-ui/components": "workspace:*"
+    "@pkg-name/components": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

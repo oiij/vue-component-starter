@@ -6,9 +6,9 @@ importers:
     specifiers:
       '@antfu/eslint-config': ^0.35.2
       '@antfu/ni': ^0.20.0
-      '@eiog-ui/components': workspace:*
-      '@eiog-ui/preset': workspace:*
-      '@eiog-ui/utils': workspace:*
+      '@pkg-name/components': workspace:*
+      '@pkg-name/preset': workspace:*
+      '@pkg-name/utils': workspace:*
       '@types/fs-extra': ^11.0.0
       '@types/node': ^18.11.9
       '@unocss/reset': ^0.48.0
@@ -16,7 +16,7 @@ importers:
       '@vitest/ui': ^0.26.3
       '@vue/test-utils': ^2.2.7
       '@vueuse/core': ^9.10.0
-      eiog-ui: workspace:*
+      pkg-name: workspace:*
       eslint: ^8.31.0
       esno: ^0.16.3
       fs-extra: ^11.1.0
@@ -38,13 +38,13 @@ importers:
       vue: ^3.2.45
       vue-tsc: ^1.0.22
     dependencies:
-      eiog-ui: link:packages/eiog-ui
+      pkg-name: link:packages/pkg-name
     devDependencies:
       '@antfu/eslint-config': registry.npmmirror.com/@antfu/eslint-config/0.35.2_iukboom6ndih5an6iafl45j2fe
       '@antfu/ni': 0.20.0
-      '@eiog-ui/components': link:packages/components
-      '@eiog-ui/preset': link:packages/preset
-      '@eiog-ui/utils': link:packages/utils
+      '@pkg-name/components': link:packages/components
+      '@pkg-name/preset': link:packages/preset
+      '@pkg-name/utils': link:packages/utils
       '@types/fs-extra': registry.npmmirror.com/@types/fs-extra/11.0.0
       '@types/node': 18.11.18
       '@unocss/reset': registry.npmmirror.com/@unocss/reset/0.48.2
@@ -75,22 +75,22 @@ importers:
 
   packages/components:
     specifiers:
-      '@eiog-ui/preset': workspace:*
-      '@eiog-ui/utils': workspace:*
+      '@pkg-name/preset': workspace:*
+      '@pkg-name/utils': workspace:*
       '@vueuse/core': ^9.1.0
       resize-observer-polyfill: ^1.5.1
     dependencies:
-      '@eiog-ui/preset': link:../preset
-      '@eiog-ui/utils': link:../utils
+      '@pkg-name/preset': link:../preset
+      '@pkg-name/utils': link:../utils
       '@vueuse/core': 9.10.0
     devDependencies:
       resize-observer-polyfill: 1.5.1
 
-  packages/eiog-ui:
+  packages/pkg-name:
     specifiers:
-      '@eiog-ui/components': workspace:*
+      '@pkg-name/components': workspace:*
     dependencies:
-      '@eiog-ui/components': link:../components
+      '@pkg-name/components': link:../components
 
   packages/preset:
     specifiers: {}

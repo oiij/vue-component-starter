@@ -1,1 +1,2 @@
-export const eiogUi = () => 'eiog-ui'
+export const eiogUi = () => 'pkg-name'
+import { install } from '@pkg-name/utils'

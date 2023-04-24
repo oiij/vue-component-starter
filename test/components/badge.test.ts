@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
-import { OBadge } from '@eiog-ui/components'
+import { OBadge } from '@pkg-name/components'
 
 const _mount = (options: any) => {
   return mount({

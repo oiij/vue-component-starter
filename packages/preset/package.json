@@ -1,5 +1,5 @@
 {
-  "name": "@eiog-ui/preset",
+  "name": "@pkg-name/preset",
   "version": "0.0.1-beta.1",
   "description": "",
   "author": "",
@@ -14,8 +14,8 @@
     "url": ""
   },
   "keywords": [
-    "eiog-ui",
-    "@eiog-ui/preset",
+    "pkg-name",
+    "@pkg-name/preset",
     "unocss preset"
   ],
   "sideEffects": false,
