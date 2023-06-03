@@ -3,7 +3,7 @@ import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { OSwitch } from '@pkg-name/components'
 
-const _mount = (options: any) => {
+function _mount(options: any) {
   return mount({
     components: {
       OSwitch,

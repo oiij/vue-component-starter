@@ -5,6 +5,7 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import fs from 'fs-extra'
 import type { ResolvedConfig } from 'vite'
+
 // https://vitejs.dev/config/
 
 let config: ResolvedConfig = undefined!

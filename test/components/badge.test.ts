@@ -3,7 +3,7 @@ import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { OBadge } from '@pkg-name/components'
 
-const _mount = (options: any) => {
+function _mount(options: any) {
   return mount({
     components: {
       OBadge,
