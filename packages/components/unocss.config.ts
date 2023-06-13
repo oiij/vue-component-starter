@@ -1,5 +1,5 @@
 import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts, transformerDirectives, transformerVariantGroup } from 'unocss'
-import { presetExplorer } from '../preset/src/index'
+import { preset } from '../preset/src/index'
 
 export default defineConfig({
   presets: [
@@ -19,7 +19,7 @@ export default defineConfig({
       },
     }),
     presetUno(),
-    presetExplorer(),
+    preset(),
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
 })
