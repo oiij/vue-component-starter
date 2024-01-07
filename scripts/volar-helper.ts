@@ -1,7 +1,7 @@
 import path from 'node:path'
 import process from 'node:process'
 import fs from 'fs-extra'
-import * as globalComponents from '../packages/components'
+import * as globalComponents from '../src/components'
 
 const TYPE_ROOT = process.cwd()
 
@@ -55,6 +55,6 @@ declare module 'vue' {
 export {}
 `
   if (code !== originalContent)
-    await fs.writeFile(path.resolve(TYPE_ROOT, 'volar.d.ts'), code, 'utf-8')
+    await fs.writeFile(path.resolve(TYPE_ROOT, 'dist', 'volar.d.ts'), code, 'utf-8')
 }
 generateComponentsType()

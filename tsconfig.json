@@ -2,31 +2,31 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@eiog/ts-config/tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
     "paths": {
-      "pkg-name": [
-        "./packages/pkg-name/src/index.ts"
+      "~/*": [
+        "src/*"
       ],
-      "@pkg-name/components": [
-        "./packages/components/index.ts"
+      "my-components": [
+        "src/index.ts"
       ],
-      "@pkg-name/utils": [
-        "./packages/utils/src/index.ts"
-      ],
-      "@pkg-name/preset": [
-        "./packages/preset/src/index.ts"
-      ]
     },
     "types": [
       "node",
-      "vite/client"
+      "vite/client",
+      "vitest/globals",
     ]
   },
+  "include": [
+    "*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+  ],
   "exclude": [
-    "**/dist/**",
-    "**/node_modules/**",
-    "**/test/dts/**",
-    "**/playground/**",
-    "**/example/**",
-    "**/packages/components/**"
+    "node_modules",
+    "dist"
   ]
 }
