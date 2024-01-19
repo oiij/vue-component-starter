@@ -1,6 +1,7 @@
 import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
+import Unocss from 'unocss/vite'
 
 export default defineConfig({
   build: {
@@ -27,6 +28,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    Unocss(), // https://github.com/antfu/unocss
   ],
   resolve: {
     alias: {

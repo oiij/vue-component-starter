@@ -39,6 +39,9 @@ importers:
       '@vueuse/core':
         specifier: ^10.7.1
         version: 10.7.1(vue@3.4.5)
+      colord:
+        specifier: ^2.9.3
+        version: 2.9.3
       commitlint:
         specifier: ^18.4.4
         version: 18.4.4(@types/node@20.10.6)(typescript@5.3.3)
@@ -2790,6 +2793,10 @@ packages:
 
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    dev: true
+
+  /colord@2.9.3:
+    resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
     dev: true
 
   /colorette@2.0.20:

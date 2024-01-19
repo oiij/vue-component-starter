@@ -13,5 +13,8 @@
     "lint:fix": "eslint . --fix",
     "update-deps": "taze -w && pnpm i",
     "preview": "vite preview"
+  },
+  "dependencies": {
+    "my-components": "workspace:*"
   }
 }

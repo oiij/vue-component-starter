@@ -24,12 +24,12 @@ async function generateComponentsType() {
   const components = {}
   Object.keys(globalComponents).forEach((key) => {
     // Replace after packaging
-    const entry = `typeof import('pkg-name')['${key}']`
-    if (key.startsWith('E'))
+    const entry = `typeof import('my-components')['${key}']`
+    if (key.startsWith('My'))
       components[key] = entry
   })
-  const originalContent = exist(path.resolve(TYPE_ROOT, 'volar.d.ts'))
-    ? await fs.readFile(path.resolve(TYPE_ROOT, 'volar.d.ts'), 'utf-8')
+  const originalContent = exist(path.resolve(TYPE_ROOT, 'dist', 'volar.d.ts'))
+    ? await fs.readFile(path.resolve(TYPE_ROOT, 'dist', 'volar.d.ts'), 'utf-8')
     : ''
 
   const originImports = parseComponentsDeclaration(originalContent)
