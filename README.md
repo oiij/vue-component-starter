@@ -1,1 +1,1 @@
-"# vite-lib-starter" 
+"# vite-lib-starter"

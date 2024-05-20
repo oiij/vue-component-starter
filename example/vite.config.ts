@@ -8,6 +8,10 @@ export default defineConfig({
     Vue(),
     Unocss(),
   ],
+  server: {
+    port: 5678,
+    host: true,
+  },
   resolve: {
     alias: {
       '~': resolve(__dirname, './src'), // 路径别名

@@ -3,7 +3,6 @@
   "extends": "@eiog/ts-config/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "dist",
     "paths": {
       "~/*": [
         "src/*"
@@ -16,7 +15,8 @@
       "node",
       "vite/client",
       "vitest/globals"
-    ]
+    ],
+    "outDir": "dist"
   },
   "include": [
     "*.d.ts",

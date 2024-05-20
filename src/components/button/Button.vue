@@ -21,83 +21,90 @@ const { type, size, block, disabled, ghost, round, loading } = toRefs(props)
 </template>
 
 <style scoped lang='less'>
-.my-button{
-  @apply transition-base flex-center p-x-3 p-y-1 rounded-4px border-1 ;
-  &:hover,&:focus{
+.my-button {
+  @apply transition-base flex-center p-x-3 p-y-1 rounded-4px border-1;
+  &:hover,
+  &:focus {
     @apply bg-black/10!;
   }
-  &:active{
+  &:active {
     @apply bg-black/20!;
   }
-  &.default{
+  &.default {
     @apply bg-def text-def-text;
-    &:hover,&:focus{
+    &:hover,
+    &:focus {
       @apply bg-def-hover!;
     }
-    &:active{
+    &:active {
       @apply bg-def-pressed!;
     }
-    &.disabled{
+    &.disabled {
       @apply bg-def-disabled!;
     }
   }
-  &.primary{
+  &.primary {
     @apply bg-primary text-primary-text;
-    &:hover,&:focus{
+    &:hover,
+    &:focus {
       @apply bg-primary-hover!;
     }
-    &:active{
+    &:active {
       @apply bg-primary-pressed!;
     }
-    &.disabled{
+    &.disabled {
       @apply bg-primary-disabled!;
     }
   }
-  &.info{
+  &.info {
     @apply bg-info text-info-text;
-    &:hover,&:focus{
+    &:hover,
+    &:focus {
       @apply bg-info-hover!;
     }
-    &:active{
+    &:active {
       @apply bg-info-pressed!;
     }
-    &.disabled{
+    &.disabled {
       @apply bg-info-disabled!;
     }
   }
-  &.success{
+  &.success {
     @apply bg-success text-success-text;
-    &:hover,&:focus{
+    &:hover,
+    &:focus {
       @apply bg-success-hover!;
     }
-    &:active{
+    &:active {
       @apply bg-success-pressed!;
     }
-    &.disabled{
+    &.disabled {
       @apply bg-success-disabled!;
     }
   }
-  &.warning{
+  &.warning {
     @apply bg-warning text-warning-text;
-    &:hover,&:focus{
+    &:hover,
+    &:focus {
       @apply bg-warning-hover!;
     }
-    &:active{
+    &:active {
       @apply bg-warning-pressed!;
     }
-    &.disabled{
+    &.disabled {
       @apply bg-warning-disabled!;
     }
   }
-  &.error{
+  &.error {
     @apply bg-error text-error-text;
-    &:hover,&:focus{
+    &:hover,
+    &:focus {
       @apply bg-error-hover!;
     }
-    &:active{
+    &:active {
       @apply bg-error-pressed!;
     }
-    &.disabled{
+    &.disabled {
       @apply bg-error-disabled!;
     }
   }

@@ -3,7 +3,7 @@ import { MyButton } from 'my-components'
 </script>
 
 <template>
-  <div class="w-full flex-col-center ">
+  <div class="w-full flex-col-center">
     <div class="flex gap-3 p-10">
       <MyButton>
         Default
@@ -48,7 +48,7 @@ import { MyButton } from 'my-components'
 </template>
 
 <style lang='less'>
-#app{
+#app {
   // background-color: #333;
 }
 </style>
