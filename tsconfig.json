@@ -7,7 +7,7 @@
       "~/*": [
         "src/*"
       ],
-      "my-components": [
+      "x0ui": [
         "src/index.ts"
       ]
     },

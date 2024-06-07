@@ -25,8 +25,8 @@ async function generateComponentsType() {
   const components = {}
   Object.keys(globalComponents).forEach((key) => {
     // Replace after packaging
-    const entry = `typeof import('my-components')['${key}']`
-    if (key.startsWith('My'))
+    const entry = `typeof import('x0ui')['${key}']`
+    if (key.startsWith('X'))
       components[key] = entry
   })
   const originalContent = exist(path.resolve(TYPE_ROOT, 'dist', 'volar.d.ts'))

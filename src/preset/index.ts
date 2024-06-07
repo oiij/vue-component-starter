@@ -13,7 +13,7 @@ export function preset(): Preset<Theme> {
 
   }
   return {
-    name: '@my-components/preset',
+    name: '@x0ui/preset',
     theme: {
       colors: {
         def: getColor(def),

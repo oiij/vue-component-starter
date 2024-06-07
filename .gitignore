@@ -22,4 +22,5 @@ lib
 *.njsproj
 *.sln
 *.sw?
-.vitepress
+**/cache/
+dev-dist

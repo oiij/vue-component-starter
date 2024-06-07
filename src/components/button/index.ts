@@ -1,1 +1,1 @@
-export { default as MyButton } from './Button.vue'
+export { default as XButton } from './Button.vue'

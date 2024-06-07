@@ -1,0 +1,6 @@
+export { default as XIconAlienWord } from './AlienWord.vue'
+export { default as XIconBallBounce } from './BallBounce.vue'
+export { default as XIconCubeRotation } from './CubeRotation.vue'
+export { default as XIconDotSpinner } from './DotSpinner.vue'
+export { default as XIconLineRotation } from './LineRotation.vue'
+export { default as XIconPixelMove } from './PixelMove.vue'
