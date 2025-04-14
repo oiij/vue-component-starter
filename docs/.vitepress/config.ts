@@ -1,12 +1,14 @@
+import { resolve } from 'node:path'
 import { cwd } from 'node:process'
-import { defineConfig } from 'vitepress'
 import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin'
-import { withPwa } from '@vite-pwa/vitepress'
-import { searchForWorkspaceRoot } from 'vite'
 import UnoCss from 'unocss/vite'
-import { getSidebar } from 'vitepress-plugin-auto-sidebar'
+import { searchForWorkspaceRoot } from 'vite'
+import { defineConfig } from 'vitepress'
 
-export default withPwa(defineConfig({
+const alias = {
+  '~components': resolve(__dirname, '../../src/components'), // 路径别名
+}
+export default defineConfig({
   title: 'x0ui',
   description: 'vue components ui',
   head: [
@@ -20,7 +22,7 @@ export default withPwa(defineConfig({
     ['link', { rel: 'apple-touch-icon', href: '/logo.svg', sizes: '192x192' }],
   ],
   themeConfig: {
-    siteTitle: 'x0ui',
+    siteTitle: 'vue-component-starter',
     logo: '/logo.svg',
     socialLinks: [
       {
@@ -37,12 +39,18 @@ export default withPwa(defineConfig({
         ],
       },
     ],
-    sidebar: getSidebar({
-      contentRoot: 'docs',
-      contentDirs: ['Components', 'Composable'],
-      collapsible: false,
-      collapsed: false,
-    }),
+    sidebar: [
+      {
+        text: '介绍',
+        link: '/overview',
+      },
+      {
+        text: '组件',
+        items: [
+          { text: '按钮', link: '/components/button' },
+        ],
+      },
+    ],
     sidebarMenuLabel: '目录',
     outline: {
       level: 'deep',
@@ -54,7 +62,7 @@ export default withPwa(defineConfig({
   },
   vite: {
     plugins: [
-      UnoCss(),
+
     ],
     server: {
       fs: {
@@ -65,53 +73,18 @@ export default withPwa(defineConfig({
     define: {
       __DATE__: `'${new Date().toISOString()}'`,
     },
-  },
-  pwa: {
-    mode: 'development',
-    base: '/',
-    scope: '/',
-    registerType: 'autoUpdate',
-    // injectRegister: 'inline',
-    includeAssets: ['favicon.svg'],
-    manifest: {
-      name: 'VitePress PWA',
-      short_name: 'VitePressPWA',
-      theme_color: '#ffffff',
-      icons: [
-        {
-          src: 'pwa-192x192.png',
-          sizes: '192x192',
-          type: 'image/png',
-        },
-        {
-          src: 'pwa-512x512.png',
-          sizes: '512x512',
-          type: 'image/png',
-        },
-        {
-          src: 'pwa-512x512.png',
-          sizes: '512x512',
-          type: 'image/png',
-          purpose: 'any maskable',
-        },
-      ],
-    },
-    workbox: {
-      globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}'],
-    },
-    devOptions: {
-      enabled: true,
-      navigateFallback: '/',
+    resolve: {
+      alias,
     },
   },
   markdown: {
     config(md) {
-      md.use(containerPreview)
-      md.use(componentPreview)
+      md.use(containerPreview, { alias })
+      md.use(componentPreview, { alias })
     },
     theme: {
       dark: 'dracula-soft',
       light: 'vitesse-light',
     },
   },
-}))
+})

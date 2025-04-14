@@ -1,9 +1,9 @@
 <script setup lang='ts'>
-import { XButton } from 'x0ui'
+import { XButton } from '../index'
 </script>
 
 <template>
-  <div class="flex gap-[10px]">
+  <div :style="{ display: 'flex', gap: '10px' }">
     <XButton type="default">
       Default
     </XButton>

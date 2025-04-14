@@ -1,14 +1,11 @@
-import { h } from 'vue'
 import type { App } from 'vue'
-import DefaultTheme from 'vitepress/theme'
-import { useData } from 'vitepress'
 import { NaiveUIContainer } from '@vitepress-demo-preview/component'
+import { useData } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
+import { h } from 'vue'
 import Layout from './Layout.vue'
-import 'uno.css'
-import '@unocss/reset/tailwind-compat.css'
 import '@vitepress-demo-preview/component/dist/style.css'
 import './vars.css'
-import 'x0ui/style.css'
 
 export default {
   extends: DefaultTheme,

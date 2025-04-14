@@ -1,25 +1,19 @@
 ---
-title: VitePress PWA
-titleTemplate: Zero-config PWA Plugin for VitePress
+title: VitePress
+titleTemplate: Vite & Vue powered static site generator.
 layout: home
 hero:
   name: VitePress
   text: Vite & Vue powered static site generator.
   tagline: Lorem ipsum...
   image:
-    src: /vitepress-logo-large.webp
+    src: /logo.svg
     alt: VitePress
   actions:
     - theme: brand
       text: Get Started
-      link: /Components/介绍
+      link: /overview
     - theme: alt
       text: View on GitHub
       link: https://github.com/vuejs/vitepress
 ---
-
-<script setup>
-const date = __DATE__
-</script>
-
-<pre class="text-xl">Generated at: {{ date }}</pre>

@@ -1,5 +1,4 @@
 import type { ComponentResolver } from 'unplugin-vue-components'
-import type { Resolver } from 'unplugin-auto-import/types'
 
 export function x0uiComponentResolvers(): ComponentResolver[] {
   return [
@@ -15,12 +14,4 @@ export function x0uiComponentResolvers(): ComponentResolver[] {
       },
     },
   ]
-}
-export function x0uiUseResolvers(): Resolver {
-  return (name) => {
-    return {
-      name,
-      from: 'x0ui',
-    }
-  }
 }
