@@ -1,15 +1,14 @@
 import { resolve } from 'node:path'
 import { cwd } from 'node:process'
 import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin'
-import UnoCss from 'unocss/vite'
 import { searchForWorkspaceRoot } from 'vite'
 import { defineConfig } from 'vitepress'
 
 const alias = {
-  '~components': resolve(__dirname, '../../src/components'), // 路径别名
+  'vue-component-starter': resolve(__dirname, '../../src'), // 路径别名
 }
 export default defineConfig({
-  title: 'x0ui',
+  title: 'vue-component-starter',
   description: 'vue components ui',
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],

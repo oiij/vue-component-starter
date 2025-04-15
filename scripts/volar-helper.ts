@@ -2,10 +2,11 @@
 import path from 'node:path'
 import process from 'node:process'
 import fs from 'fs-extra'
+import { name } from '../package.json'
 import * as globalComponents from '../src/components'
 
 const TYPE_ROOT = process.cwd()
-
+const PREFIX = 'X'
 function exist(path: string) {
   return fs.existsSync(path)
 }
@@ -25,8 +26,8 @@ async function generateComponentsType() {
   const components = {}
   Object.keys(globalComponents).forEach((key) => {
     // Replace after packaging
-    const entry = `typeof import('x0ui')['${key}']`
-    if (key.startsWith('X'))
+    const entry = `typeof import(${name})['${key}']`
+    if (key.startsWith(PREFIX))
       components[key] = entry
   })
   const originalContent = exist(path.resolve(TYPE_ROOT, 'dist', 'volar.d.ts'))

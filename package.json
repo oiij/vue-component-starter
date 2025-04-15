@@ -38,11 +38,13 @@
     "package.json"
   ],
   "scripts": {
-    "dev": "pnpm run /^dev:.*/",
-    "dev:pkg": "rimraf dist && vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch ",
+    "dev": "rimraf dist && pnpm run /^dev:.*/",
+    "dev:pkg": "vite build --watch ",
     "dev:doc": "vitepress dev docs",
     "dev:resolver": "tsup --watch",
-    "build": "vue-tsc --declaration --emitDeclarationOnly && vite build && tsx scripts/volar-helper.ts",
+    "build": "rimraf dist && pnpm run /^build:.*/",
+    "build:pkg": "vue-tsc --declaration --emitDeclarationOnly && vite build",
+    "build:resolver": "tsup",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "lint": "eslint .",
@@ -60,6 +62,9 @@
     "commit": "git pull && git add -A && pnpm cz && git push",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "npx simple-git-hooks"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.12.0",
